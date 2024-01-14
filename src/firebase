@@ -1,0 +1,24 @@
+import { initializeApp } from 'firebase/app'
+
+import { getFirestore, collection } from 'firebase/firestore'
+// ... other firebase imports
+
+const firebaseConfig = {
+    apiKey: "AIzaSyA9VCAonVnfSWw12qn2BgY5CWkxucobiOc",
+    authDomain: "ejemplo-vue-firebase.firebaseapp.com",
+    databaseURL: "https://ejemplo-vue-firebase.firebaseio.com",
+    projectId: "ejemplo-vue-firebase",
+    storageBucket: "ejemplo-vue-firebase.appspot.com",
+    messagingSenderId: "849831546859",
+    appId: "1:849831546859:web:7815118403295a963a13ae"
+  };
+  
+ 
+export const firebaseApp = initializeApp(firebaseConfig);
+
+// used for the firestore refs
+export const db = getFirestore(firebaseApp)
+
+
+// here we can export reusable database references
+//export const todos = useCollection(collection(db, 'todos'))
